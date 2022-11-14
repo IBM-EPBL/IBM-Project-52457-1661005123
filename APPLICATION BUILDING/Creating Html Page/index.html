@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+  </head>
+  <body>
+   
+   
+    <h2 class="header">Sign Language TO Speech</h2>
+    <div class="video">
+        <img src="{{ url_for('video') }}" width="50%">
+    </div>
+    <div class="container">
+    <form action='/predict' method='post'>
+    <button type="submit" name="start" value="start" class="button1" >Start</button>
+    </form>
+  <form action='/stop' method='post'>
+
+    <button type="submit" name="stop" value="stop" class="button2" >Stop</button>
+  </form>
+  </div>
+  <div class="instruction"> 
+    <center> 
+    <p> <details>
+      <summary><b>Instructions to Use</b></summary>
+      <p>Once the webcam is <b>ON</b> Click <strong>"START"</strong> to start the predicition model.<br>
+      <br>
+      >>Click <strong>"s"</strong> to save the text.<br>
+      <br>
+      >>Click <strong>"a"</strong> to leave a space.<br>
+      <br>
+      >>Click <strong>"d"</strong> to delete a character from right to left.<br>
+      <br>
+      >>Click <strong>"w"</strong> to delete entire text.<br>
+      <br>
+      >> The Saved text appears on the top left corner of the video Screen<br>
+      <br>
+      >> Once you are satisfied with the saved text press<b>"STOP"</b> to convert it into speech<br>
+      <br>
+      >><b>NOTE: The hand must be on the screen to display the text to save,delete or to leave a space between them.</b>
+           
+      </p>
+    </details></p>
+  </center> 
+</div>
+<br>
+<br>
+<div class="team">
+<center>
+<details>
+  <summary><b>Team</b></summary>
+  <p><b>Ibm ID-2475-1658472446</b>
+  <br>
+   1.Sajith<br>
+   2.Stanlee<br>
+   3.Sachin<br>
+   4.Harish<br>
+
+  
+  </p>
+</details>
+</center>
+</div>
+<p>Feel Free to contact us !!!!!</p>
+<center>
+<div class="alert info">
+  <span class="closebtn">&times;</span>  
+  <strong>NOTE:</strong> A disturbance free background with good lighting(White-background) is preferred.
+
+</div>
+</center>
+<script>
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+      var div = this.parentElement;
+      div.style.opacity = "0";
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+  }
+  </script>
+  
+  <a class="social-icon"href="https://in.linkedin.com/in/sajith-m-82431721a?trk=profile-badge" target="_blank">
+    <ion-icon name="logo-linkedin"></ion-icon>
+  </a>
+  <a class="git"href="https://github.com/IBM-EPBL/IBM-Project-2475-1658472446.git" target="_blank">
+    <ion-icon name="logo-github"></ion-icon>
+  </a>
+
+  
+          
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+              
+
+  
+  </body>
+</html>
